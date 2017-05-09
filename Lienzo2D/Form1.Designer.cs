@@ -44,6 +44,7 @@
             this.txtsalida = new System.Windows.Forms.RichTextBox();
             this.tperrores = new System.Windows.Forms.TabPage();
             this.txterrores = new System.Windows.Forms.RichTextBox();
+            this.trToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tcprincipal.SuspendLayout();
             this.tpentrada.SuspendLayout();
@@ -53,12 +54,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.herramientasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1113, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,7 +105,8 @@
             // 
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ejecutarToolStripMenuItem,
-            this.verArbolToolStripMenuItem});
+            this.verArbolToolStripMenuItem,
+            this.trToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
@@ -131,29 +134,31 @@
             this.tcprincipal.Location = new System.Drawing.Point(0, 24);
             this.tcprincipal.Name = "tcprincipal";
             this.tcprincipal.SelectedIndex = 0;
-            this.tcprincipal.Size = new System.Drawing.Size(1113, 625);
+            this.tcprincipal.Size = new System.Drawing.Size(672, 612);
             this.tcprincipal.TabIndex = 4;
             // 
             // tpentrada
             // 
+            this.tpentrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.tpentrada.Controls.Add(this.CuadroEntrada);
             this.tpentrada.Location = new System.Drawing.Point(4, 22);
             this.tpentrada.Name = "tpentrada";
             this.tpentrada.Padding = new System.Windows.Forms.Padding(3);
-            this.tpentrada.Size = new System.Drawing.Size(1105, 599);
+            this.tpentrada.Size = new System.Drawing.Size(664, 586);
             this.tpentrada.TabIndex = 2;
             this.tpentrada.Text = "Entrada";
-            this.tpentrada.UseVisualStyleBackColor = true;
             // 
             // CuadroEntrada
             // 
             this.CuadroEntrada.AutoScrollMinSize = new System.Drawing.Size(25, 15);
+            this.CuadroEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CuadroEntrada.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.CuadroEntrada.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CuadroEntrada.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CuadroEntrada.LineNumberStartValue = ((uint)(0u));
             this.CuadroEntrada.Location = new System.Drawing.Point(3, 3);
             this.CuadroEntrada.Name = "CuadroEntrada";
-            this.CuadroEntrada.Size = new System.Drawing.Size(1099, 593);
+            this.CuadroEntrada.Size = new System.Drawing.Size(658, 580);
             this.CuadroEntrada.TabIndex = 0;
             // 
             // tpsalida
@@ -162,7 +167,7 @@
             this.tpsalida.Location = new System.Drawing.Point(4, 22);
             this.tpsalida.Name = "tpsalida";
             this.tpsalida.Padding = new System.Windows.Forms.Padding(3);
-            this.tpsalida.Size = new System.Drawing.Size(722, 487);
+            this.tpsalida.Size = new System.Drawing.Size(664, 586);
             this.tpsalida.TabIndex = 0;
             this.tpsalida.Text = "Salida";
             this.tpsalida.UseVisualStyleBackColor = true;
@@ -175,7 +180,7 @@
             this.txtsalida.ForeColor = System.Drawing.Color.Lime;
             this.txtsalida.Location = new System.Drawing.Point(3, 3);
             this.txtsalida.Name = "txtsalida";
-            this.txtsalida.Size = new System.Drawing.Size(716, 481);
+            this.txtsalida.Size = new System.Drawing.Size(658, 580);
             this.txtsalida.TabIndex = 1;
             this.txtsalida.Text = "";
             // 
@@ -185,7 +190,7 @@
             this.tperrores.Location = new System.Drawing.Point(4, 22);
             this.tperrores.Name = "tperrores";
             this.tperrores.Padding = new System.Windows.Forms.Padding(3);
-            this.tperrores.Size = new System.Drawing.Size(722, 487);
+            this.tperrores.Size = new System.Drawing.Size(664, 586);
             this.tperrores.TabIndex = 1;
             this.tperrores.Text = "Errores";
             this.tperrores.UseVisualStyleBackColor = true;
@@ -198,20 +203,29 @@
             this.txterrores.ForeColor = System.Drawing.Color.Red;
             this.txterrores.Location = new System.Drawing.Point(3, 3);
             this.txterrores.Name = "txterrores";
-            this.txterrores.Size = new System.Drawing.Size(716, 481);
+            this.txterrores.Size = new System.Drawing.Size(658, 580);
             this.txterrores.TabIndex = 2;
             this.txterrores.Text = "";
+            // 
+            // trToolStripMenuItem
+            // 
+            this.trToolStripMenuItem.Name = "trToolStripMenuItem";
+            this.trToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.trToolStripMenuItem.Text = "tr";
+            this.trToolStripMenuItem.Click += new System.EventHandler(this.trToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 649);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(672, 636);
             this.Controls.Add(this.tcprincipal);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lienzo2D";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tcprincipal.ResumeLayout(false);
@@ -241,6 +255,7 @@
         private System.Windows.Forms.RichTextBox txtsalida;
         private System.Windows.Forms.TabPage tperrores;
         private System.Windows.Forms.RichTextBox txterrores;
+        private System.Windows.Forms.ToolStripMenuItem trToolStripMenuItem;
     }
 }
 

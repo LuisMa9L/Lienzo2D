@@ -58,5 +58,9 @@ namespace Lienzo2D
             CuadroEntrada.Text = contenido;
             
         }
+
+        private void trToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

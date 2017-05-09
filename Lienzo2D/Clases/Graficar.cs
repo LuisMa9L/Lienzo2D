@@ -85,10 +85,12 @@ namespace Lienzo2D.Clases
             {
                 System.Diagnostics.Process.Start(ruta);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 //Error :|
             }
+
+
         }
 
     }

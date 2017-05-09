@@ -169,9 +169,11 @@ namespace Lienzo2D.Clases
           
             SENTENCIADENTRO.ErrorRule = SyntaxError + SENTENCIADENTRO;
 
+            //---------------------> Eliminacion de caracteres, no terminales, sin utilidad
 
-
-
+            this.MarkPunctuation("(", ")", ";", ":", "{", "}", "=",",","var","$","Principal");
+            this.MarkPunctuation("?", "¿", "Lienzo", ":", "{", "}", "=", "Pintar_P", "Pintar_OR");
+            this.MarkTransient(SENTENCIAFUERA,SENTENCIADENTRO);
             //---------------------> Definir Asociatividad
             RegisterOperators(1, Associativity.Left, "||", "!||", "&|");                 //OR
             RegisterOperators(2, Associativity.Left, "&&", "!&&");                 //AND
