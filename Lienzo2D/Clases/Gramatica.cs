@@ -55,6 +55,7 @@ namespace Lienzo2D.Clases
             var PARAMETRO = new NonTerminal("PARAMETRO");
             var ARREGLO_DATOSP = new NonTerminal("ARREGLO_DATOSP");
             var RETORNAR = new NonTerminal("RETORNAR");
+            var AUMENTO_DISMIN = new NonTerminal("AUMENTO_DISMIN ");
             NumberLiteral num = TerminalFactory.CreateCSharpNumber("num");
             IdentifierTerminal id = TerminalFactory.CreateCSharpIdentifier("id");
             var datostring = new StringLiteral("datostring", "\"", StringOptions.AllowsDoubledQuote);
@@ -86,15 +87,19 @@ namespace Lienzo2D.Clases
                                     |DECLARAR_ASIGNAR +ToTerm("$")
                                     |ASIGNAR +ToTerm("$")
                                     |RETORNAR + ToTerm("$")
-                                    |EXP + ToTerm("--") + ToTerm("$")
-                                    | EXP + ToTerm("++") + ToTerm("$")
-                                    | FPINTAR_P + ToTerm("$")
+                                    |AUMENTO_DISMIN + ToTerm("$")
+                                    |FPINTAR_P + ToTerm("$")
                                     |FPINTAR_OR +ToTerm("$")
                                     ;
-            CICLOS.Rule = IF1
+
+            AUMENTO_DISMIN.Rule =       EXP + ToTerm("--") + ToTerm("$")
+                                    |   EXP + ToTerm("++") + ToTerm("$");
+
+            CICLOS.Rule =     IF1
                             | PARA
                             | MIENTRAS
                             | HACER_MIENTRAS;
+
             FPINTAR_P.Rule = ToTerm("Pintar_P") + ToTerm("(") + EXP + ToTerm(",") + EXP + ToTerm(",") + EXP + ToTerm(",") + EXP + ToTerm(")");
             FPINTAR_OR.Rule = ToTerm("Pintar_OR") + ToTerm("(") + EXP + ToTerm(",") + EXP + ToTerm(",") + EXP + ToTerm(",") + EXP + ToTerm(",") + EXP  +ToTerm(",") + EXP+ToTerm(")");
             RETORNAR.Rule = ToTerm("retorna")+EXP;
@@ -126,13 +131,19 @@ namespace Lienzo2D.Clases
             //DECLARAR_ASIGNAR_ARREGLOS.Rule = CONSERVAR + VISIVILIDAD+ ToTerm("var") + TIPO + ToTerm("arreglo")  + ASIGNACION_ARREGLOS;
             LISTADIMENSIONES.Rule = MakeStarRule(LISTADIMENSIONES,LISTADIMENSION);         //OJO num por exp
             LISTADIMENSION.Rule = ToTerm("[") + EXP + ToTerm("]");
+
             FUNCION_PROCED.Rule = VISIVILIDAD + TIPO + ARREGLO_FUN_PRO + id + ToTerm("(") + PARAMETROS + ToTerm(")") + ToTerm("¿") + SENTENCIASDENTRO + ToTerm("?")
                                 | VISIVILIDAD + ARREGLO_FUN_PRO + id + ToTerm("(") + PARAMETROS + ToTerm(")") + ToTerm("¿") + SENTENCIASDENTRO + ToTerm("?");
+
             PARAMETROS.Rule = MakeStarRule(PARAMETROS, ToTerm(","), PARAMETRO);             
+
             PARAMETRO.Rule = TIPO + EXP;                                                  //ojo id por exp... duda
+
             ARREGLO_FUN_PRO.Rule = MakeStarRule(ARREGLO_FUN_PRO,ToTerm("[")+ToTerm("]"));
+
             ASIGNACION_ARREGLOS.Rule = LISTAIDS + LISTADIMENSIONES + ToTerm("=") + ToTerm("{") + ARREGLO_DATOSP + ToTerm("}")
                                         | LISTAIDS + LISTADIMENSIONES + ToTerm("=") + ToTerm("{") + LISTA_EXP + ToTerm("}");
+
             ARREGLO_DATOSP.Rule = MakeStarRule(ARREGLO_DATOSP, ToTerm(","),ARREGLO_DATOS);
             ARREGLO_DATOS.Rule = ToTerm("{") + LISTA_EXP + ToTerm("}");
             LISTA_EXP.Rule = MakeStarRule(LISTA_EXP,ToTerm(","),EXP);

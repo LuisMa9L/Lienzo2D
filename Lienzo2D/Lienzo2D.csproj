@@ -55,9 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Analisis.cs" />
+    <Compile Include="Clases\Ambito.cs" />
     <Compile Include="Clases\Error.cs" />
     <Compile Include="Clases\Graficar.cs" />
     <Compile Include="Clases\Gramatica.cs" />
+    <Compile Include="Clases\Metodo.cs" />
+    <Compile Include="Clases\Simbolo.cs" />
     <Compile Include="Clases\Variable.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

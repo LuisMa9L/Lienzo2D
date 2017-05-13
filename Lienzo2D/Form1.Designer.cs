@@ -37,6 +37,7 @@
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ejecutarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verArbolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tcprincipal = new System.Windows.Forms.TabControl();
             this.tpentrada = new System.Windows.Forms.TabPage();
             this.CuadroEntrada = new FastColoredTextBoxNS.FastColoredTextBox();
@@ -44,7 +45,7 @@
             this.txtsalida = new System.Windows.Forms.RichTextBox();
             this.tperrores = new System.Windows.Forms.TabPage();
             this.txterrores = new System.Windows.Forms.RichTextBox();
-            this.trToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablaDeSimbolosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tcprincipal.SuspendLayout();
             this.tpentrada.SuspendLayout();
@@ -106,7 +107,8 @@
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ejecutarToolStripMenuItem,
             this.verArbolToolStripMenuItem,
-            this.trToolStripMenuItem});
+            this.trToolStripMenuItem,
+            this.tablaDeSimbolosToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
@@ -114,16 +116,23 @@
             // ejecutarToolStripMenuItem
             // 
             this.ejecutarToolStripMenuItem.Name = "ejecutarToolStripMenuItem";
-            this.ejecutarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ejecutarToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.ejecutarToolStripMenuItem.Text = "Ejecutar";
             this.ejecutarToolStripMenuItem.Click += new System.EventHandler(this.ejecutarToolStripMenuItem_Click);
             // 
             // verArbolToolStripMenuItem
             // 
             this.verArbolToolStripMenuItem.Name = "verArbolToolStripMenuItem";
-            this.verArbolToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verArbolToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.verArbolToolStripMenuItem.Text = "Ver Arbol";
             this.verArbolToolStripMenuItem.Click += new System.EventHandler(this.verArbolToolStripMenuItem_Click);
+            // 
+            // trToolStripMenuItem
+            // 
+            this.trToolStripMenuItem.Name = "trToolStripMenuItem";
+            this.trToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.trToolStripMenuItem.Text = "tr";
+            this.trToolStripMenuItem.Click += new System.EventHandler(this.trToolStripMenuItem_Click);
             // 
             // tcprincipal
             // 
@@ -207,12 +216,12 @@
             this.txterrores.TabIndex = 2;
             this.txterrores.Text = "";
             // 
-            // trToolStripMenuItem
+            // tablaDeSimbolosToolStripMenuItem
             // 
-            this.trToolStripMenuItem.Name = "trToolStripMenuItem";
-            this.trToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.trToolStripMenuItem.Text = "tr";
-            this.trToolStripMenuItem.Click += new System.EventHandler(this.trToolStripMenuItem_Click);
+            this.tablaDeSimbolosToolStripMenuItem.Name = "tablaDeSimbolosToolStripMenuItem";
+            this.tablaDeSimbolosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.tablaDeSimbolosToolStripMenuItem.Text = "Tabla de símbolos ";
+            this.tablaDeSimbolosToolStripMenuItem.Click += new System.EventHandler(this.tablaDeSimbolosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -256,6 +265,7 @@
         private System.Windows.Forms.TabPage tperrores;
         private System.Windows.Forms.RichTextBox txterrores;
         private System.Windows.Forms.ToolStripMenuItem trToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablaDeSimbolosToolStripMenuItem;
     }
 }
 

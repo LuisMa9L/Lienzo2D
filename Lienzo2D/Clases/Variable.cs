@@ -7,6 +7,7 @@ namespace Lienzo2D.Clases
         public String nombre;
         public Object valor;
         public int tipo;
+        public String atributo;
 
         //V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****V*****
         //-------> entero == 1
@@ -19,10 +20,11 @@ namespace Lienzo2D.Clases
             nombre = nom;
             tipo = tip;
         }
-        public Variable(String nom, Object val)
+        public Variable(String nom, Object val, int tip)
         {
             nombre = nom;
             valor = val;
+            tipo = tip;
         }
     }
 }

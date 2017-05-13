@@ -62,5 +62,11 @@ namespace Lienzo2D
         private void trToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void tablaDeSimbolosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String desktop = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            Process.Start(desktop + "\\Files\\ht2.html");                                               //-----> Ver tabla de simbolos, previamente creada 
+        }
     }
 }
